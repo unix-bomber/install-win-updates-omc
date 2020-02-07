@@ -1,0 +1,15 @@
+---
+- name: Create windows update scheduled task at given time
+  win_scheduled_task:
+    name: Update Windows and reboot
+    path: \
+    actions:
+    - path: powershell.exe
+      arguments: C:\temp\installupdates.ps1
+    triggers:
+    - type: weekly
+      start_boundary: "2019-01-01{{ install_update_time }}"
+      days_of_week: Monday
+    username: SYSTEM
+    state: present
+    run_level: highest

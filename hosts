@@ -1,0 +1,12 @@
+---
+
+example_group:
+  host1:
+    install_update_time: T23:59:00
+  host2:
+    install_update_time: T23:59:00
+  host3:
+    install_update_time: T23:59:00
+  host4:
+    install_update_time: T23:59:00
+    
