@@ -1,4 +1,9 @@
 ---
+- name: Send installupdates.ps1 to endpoints
+  win_copy:
+    src: files/installupdates.ps1
+    dest: C:\Temp\installupdates.ps1
+
 - name: Create windows update scheduled task at given time
   win_scheduled_task:
     name: Update Windows and reboot

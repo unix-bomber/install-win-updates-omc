@@ -1,0 +1,8 @@
+---
+
+ - name:
+   hosts:
+     - virtual
+     - physical
+   roles:
+     - roles/install-win-updates-omc

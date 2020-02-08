@@ -1,12 +1,18 @@
 ---
 
-example_group:
-  host1:
-    install_update_time: T23:59:00
-  host2:
-    install_update_time: T23:59:00
-  host3:
-    install_update_time: T23:59:00
-  host4:
-    install_update_time: T23:59:00
-    
+[virtual]
+netstore.GHOWSTOWN.COM ansible_host=192.168.0.121
+adir.GHOWSTOWN.COM ansible_host=192.168.0.120
+wsus.GHOWSTOWN.COM ansible_host=192.168.0.123
+
+[physical]
+physical1.GHOWSTOWN.COM ansible_host=192.168.0.22
+physical2.GHOWSTOWN.COM ansible_host=192.168.0.21
+
+[all:vars]
+ansible_user=t-admin@GHOWSTOWN.COM
+ansible_password=obfuscated
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_transport=credssp
+ansible_winrm_server_cert_validation=ignore
